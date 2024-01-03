@@ -1,0 +1,10 @@
+version: "2"
+stages:
+  - stage: lint
+    name: Terraform Linting
+    jobs:
+      - job: lint
+        name: Linting
+        script:
+          - cd $CI_PROJECT_DIR
+          - terraform fmt --lint
